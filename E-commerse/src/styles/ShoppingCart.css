@@ -1,0 +1,129 @@
+/* ShoppingCart.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  width: 60%;
+  margin: auto;
+}
+
+.cart_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-bottom: 2px solid skyblue;
+  padding-bottom: 5px;
+}
+
+.cart_img {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.cart_box img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart_img p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cart_box div:nth-child(2) button {
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cart_box div:nth-child(2) button:hover {
+  color: skyblue;
+}
+
+.cart_box div:nth-child(3) button {
+  padding: 5px 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: skyblue;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart_box div:nth-child(3) button:hover {
+  background-color: darkseagreen;
+}
+
+.cart_box div:nth-child(3) span {
+  background-color: lightgreen;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total span:nth-child(1) {
+  font-size: 2rem;
+  color: skyblue;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.total span:nth-child(2) {
+  font-size: 2rem;
+  color: green;
+  font-weight: bold;
+}
+
+.checkoutBtn {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: skyblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutBtn:hover {
+  background-color: darkseagreen;
+}
+@media (max-width: 768px) {
+  .cart_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart_img {
+    width: 100%;
+  }
+
+  .cart_box img {
+    width: 50px;
+    height: 50px;
+  }
+}
