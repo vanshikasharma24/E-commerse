@@ -49,8 +49,6 @@ const Checkout = ({ totalPrice }) => {
     setAddress("");
     setPayment("");
     setErrors({ name: "", address: "", payment: "" });
-
-    alert("Thank you for your order! Your transaction is successful!");
   };
   
   return (

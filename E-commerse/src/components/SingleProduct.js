@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/SingleProduct.css";
 const SingleProduct = ({ item, handleClick }) => {
-  const { title, author, price, img } = item;
+  const { title, description, price, img } = item;
   return (
     <div className="cards">
       <div className="image_box">
@@ -9,7 +9,7 @@ const SingleProduct = ({ item, handleClick }) => {
       </div>
       <div className="details">
         <p>{title}</p>
-        <p>{author}</p>
+        <p>{description}</p>
         <p>Price - {price}Rs</p>
         <button onClick={() => handleClick(item)}>Add to Cart</button>
       </div>
@@ -19,4 +19,3 @@ const SingleProduct = ({ item, handleClick }) => {
 
 export default SingleProduct;
 
-// id, title, autor, price, img
