@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Checkout.css";
+import { displayRazorpay } from "../razorpay";
 
 const Checkout = ({ totalPrice }) => {
   const [name, setName] = useState("");
@@ -41,14 +42,15 @@ const Checkout = ({ totalPrice }) => {
       return;
     }
   
-    // Show the success message
-    alert("Thank you for your order! Your transaction is successful!");
-  
+    displayRazorpay(parseFloat(payment));
+
     // Clear the form fields
     setName("");
     setAddress("");
     setPayment("");
     setErrors({ name: "", address: "", payment: "" });
+
+    alert("Thank you for your order! Your transaction is successful!");
   };
   
   return (
